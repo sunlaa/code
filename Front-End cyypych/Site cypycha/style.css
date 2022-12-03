@@ -1,0 +1,40 @@
+
+h1 {  
+  font-size: 125px;
+  text-align: center;
+font-family: Georgia, serif;
+color: rgb(255, 0, 251);
+text-shadow: 1px 1px 1px #000;
+}
+
+body {
+background-image: url(https://img.freepik.com/premium-vector/cartoon-chick-seamless-pattern_51194-57.jpg);
+}
+
+.kur {
+  border: 3px solid pink;
+  padding: 3px;
+  width: 40%;
+  color: blueviolet;
+  background-color: aliceblue;
+  font-family: cursive;
+  font-size: 30px;
+}
+
+  table{ 
+border-collapse: collapse;
+border: 3px solid gray
+  }
+
+  td, th{
+    padding: 3px; 
+    border: 1px solid black
+  }
+
+th, td{
+  background-color: azure;
+}
+
+.top{
+  float: right; 
+}

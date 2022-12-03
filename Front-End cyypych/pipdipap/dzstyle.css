@@ -1,0 +1,178 @@
+body {
+    margin: 0px auto;
+    font-family: Roboto, sans-serif;
+}
+
+.SiteHead {
+   position: fixed;
+   top: 0;
+   width: 1519px;
+    height: 70px;
+    background: #007650;
+}
+
+.Logo {
+    float: left;
+    padding: 17px 0px 0px 200px;
+}
+
+.Links {
+    padding: 20px 0px 0px 1000px;
+    color: #FFFF;
+}
+
+a {
+    font-size: 17px;
+    text-decoration: none;
+    color: #FFFF;
+}
+
+ .Title1 { 
+    background-image: url(image.png);
+    background-size: 85%;
+    margin: 0;
+    width: 1519px;
+    height: 250px;
+  }
+
+ .GreenPip {
+    color: #FFFF;
+    font-size: 72px;
+    padding-left: 500px;
+    padding-top: 50px;
+ }
+
+ .Part2 {
+    background-color: #EEEEEE;
+    width: 1519px;
+    height: 500px;
+    padding-top: 15px;
+    border: 0px;
+    margin-top: 0%;
+ }
+
+
+ .Part2_1 {
+    width: 488px;
+    height: auto;
+    font-size: 15px;
+    padding-left: 530px;
+ }
+
+ .Title2 {
+    text-align: center;
+    color: #007650;
+    font-size: 32px;
+ }
+
+ .WhiteText {
+    font-size: 28px;
+    color: #FFFF;
+    width: 550px;
+    padding-left: 450px;
+    padding-top: 40px;
+    text-align: center;
+ }
+
+ .BlueTitle {
+    height: 228px;
+    width: 1519px;
+    background: url(blue.png);
+    background-position: center;
+    background-size: cover;
+ }
+
+ .CoinPip {
+    font-size: 32px;
+    color: #007650;
+    text-align: center;
+ }
+
+ .GreenZnak{
+float: left;
+margin-right: 10px;
+ }
+
+ .P1 {
+    font-size: 20px;
+ }
+
+ .LastP {
+    font-size: 20px;
+ }
+
+ .Part3 {
+    width: 700px;
+    padding-left: 450px;
+    padding-bottom: 30px;
+    background: #FFFF;
+ }
+
+
+/* .photo { 
+   text-align: center;
+   display: inline-block;
+   vertical-align: top;
+   padding: 20px;
+}
+
+.Part4{
+   background-color: #EEEEEE;
+   text-align: center;
+   height: 750px;
+   width: 1019px;
+   padding-left: 250px;
+   padding-right: 250px;
+} */
+
+.container {
+   background-color: #EEEEEE;
+   margin: 0 auto;
+}
+
+.Part4 {
+   display: flex;
+   flex-wrap: wrap;
+}
+
+.photo {
+   text-align: center;
+   flex-basis: 33%;
+   box-sizing: border-box;
+}
+
+.Team{
+   color: #007650;
+   padding: 30px;
+   text-align: center;
+}
+
+
+
+.Name{
+color: #007650;
+} 
+
+.Under {
+   color: black;
+   font-size: 15px;
+
+}
+
+.LastText {
+   font-size: 15px;
+   text-align: center;
+   color:#FFFF;
+   margin-top: 0px;
+   padding-left: 450px;
+   padding-right: 450px;
+   padding-top: 30px;
+}
+
+.Last {
+   background-color: #333333;
+   height: 100px;
+   width: 1519px;
+
+
+}

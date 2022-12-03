@@ -1,0 +1,51 @@
+body {
+background-image: url(https://bipbap.ru/wp-content/uploads/2017/04/0_7c779_5df17311_orig.jpg); 
+background-size: 100% auto;
+}
+
+ .text { 
+    padding: 1rem;
+    border-radius: 5px;
+    display: inline; 
+    background: rgba(15, 241, 184, 0.3); 
+
+
+ } 
+
+.long {
+    width: 700px;
+    height: 300px;
+    background: pink;
+    border: 2px solid rebeccapurple;
+    padding: 10px;
+    margin: auto;
+    overflow: auto;
+}
+
+.naz {
+    color: cornsilk;
+    background: purple;
+    padding: 5px;
+}
+
+.pic {
+float: right;
+margin: 10px;
+}
+
+.err {
+    width: 250px;
+    height: 80px;
+    background: yellow;
+    padding: 5px;
+    border: 2px solid orange;
+   margin: 0px 0px 0px 850px;
+   position: relative;
+}
+
+.butt { 
+    position: absolute;
+    bottom: 8px;
+    right: 5px;
+
+}
