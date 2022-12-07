@@ -1,0 +1,16 @@
+.popit {
+display: flex;
+justify-content: center;
+}
+
+.pop {
+    display: flex;
+    justify-content: center;
+}
+
+figcaption {
+    text-align: center;
+    color: blueviolet;
+    font-size: 20px;
+    
+}

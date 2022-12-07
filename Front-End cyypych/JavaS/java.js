@@ -179,22 +179,202 @@
  
 //  alert (sum);
 
- let menu = {
-    width: 200,
-    height: 300,
-    title: "My menu"
-  };
+// let menu = {
+//   width: 200,
+//   height: 300,
+//   title: "My menu"
+// };
  
-  function multiplyNumeric(obj) {
-    for (let key in obj) {
-        if (typeof obj[key] == 'number') {
-            obj[key] *=2;
-        }
-    } 
+// function multiplyNumeric(obj) {
+//     for (let key in obj) {
+//       if (typeof obj[key] == 'number') {
+//             obj[key] *=2;
+//         }
+//     } 
   
-  }
+//   }
 
-  multiplyNumeric(menu)
-    alert (menu.width)
-    alert (menu.height)
-    alert (menu.title)
+//   multiplyNumeric(menu)
+//     alert (menu.width)
+//     alert (menu.height)
+//     alert (menu.title)
+
+
+// let year = {     // Клонирование объектов
+//   first: 'winter',
+//   second: 'spring',
+// };
+
+// let god = {
+//   third: 'summer',
+//   fourth: 'autmn',
+// };
+
+// let clone = {};
+
+// for (let key in year) {
+//   clone[key] = year[key];
+// }
+
+// alert(clone.first);
+
+// Object.assign(clone, god);
+
+// for (let key in clone) {
+//   alert(clone[key])
+// };
+
+
+
+// let karbonara = {     // Вложенное клонирование
+//   lapsha: '500g',
+//   bacon: '150g',
+//   souse: {
+//     milk: '100ml',
+//     egg: '2 pices',
+//   }
+// };
+
+// let clon = {};
+
+// for (let key in karbonara) {
+//   clon[key] = karbonara[key];
+//   if (key == Object) {
+//     let clonin = {};
+//     for (let pen in key) {
+//       clonin[pen] = key[pen]
+//     }
+//   }
+// }
+
+// for (let key in clon) {
+//   alert(clon[key]);
+//   if (typeof clon[key] === 'object') {
+//   for (let pen in (clon[key])) {
+//     alert ((clon[key])[pen])
+//   }
+// }
+// }
+
+
+
+
+
+
+// let karbonara = {     // Вложенное клонирование с использованием structuredClone
+//     lapsha: '500g',
+//     bacon: '150g',
+//     souse: {
+//       milk: '100ml',
+//       egg: '2 pices',
+//     }
+//   };
+
+//   const clone = structuredClone(karbonara);
+
+//   for (let key in clone) {
+//     alert(clone[key])
+//     if (typeof clone[key] === 'object') {  // Использование только typeof (???)
+//       for (let pen in (clone[key])) {
+//         alert ((clone[key])[pen])
+//       }
+//     }
+//   }
+
+
+// let calculator = {
+//   read() {
+//     this.first = prompt('Введите первое число');
+//     this.second = prompt('Введите второе число');
+//   },
+//   sum() {
+//     return (+(this.first) + +(this.second))
+//   },
+//   mull() {
+//     return (this.first * this.second)
+//   },
+// }
+
+// calculator.read();
+// alert(calculator.sum());
+// alert(calculator.mull());
+
+
+// function Calculator() {
+//     this.read = function() {
+//         this.a = +prompt ('a?', '0')
+//         this.b = +prompt ('b?', '0')
+//     }
+//     this.sum = function() {
+//         return(this.a + this.b)
+//     }
+//     this.mul = function() {
+//         return(this.a * this.b)
+
+//     }
+// }
+
+// let calculator = new Calculator();
+// calculator.read();
+
+// alert( "Sum=" + calculator.sum() );
+// alert( "Mul=" + calculator.mul() );
+
+
+
+// function Accumulator(startingValue) {
+//     this.value = startingValue,
+//     this.read = function(){
+//         newValue = +prompt('Ввведите число');
+//         this.value += newValue;
+//     }
+    
+// }
+
+// let accumulator = new Accumulator(2); // начальное значение 1
+
+// accumulator.read(); // прибавляет введённое пользователем значение к текущему значению
+// accumulator.read();
+// accumulator.read();
+// accumulator.read(); 
+
+// alert(accumulator.value); // выведет сумму этих значений
+
+// let User = {
+//     name: 'Bob',
+//     adress: {
+//         street: 'Right',
+//         appartament: '34',
+//         flour: '2',
+
+//     },
+//     loveCake() {
+//         alert('true');
+//     },
+// };
+
+// let User2 = {};
+
+//  delete User.adress.flour;
+
+//  alert(User.adress?. street);
+//  User.loveCake();
+//  User2.loveCake?.();
+//  alert(User.adress.appartament);
+
+let sym = Symbol('name');
+
+let obj = {
+    name: 'Roby',
+    age: '15',
+    [sym]: 'hi',
+}
+
+let clone = {};
+
+Object.assign(clone, obj);
+
+alert(clone[sym]);
+
+alert(sym.description);
+
