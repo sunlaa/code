@@ -713,18 +713,6 @@
   
 
 
-// function aclean(array) {
-//     let map = new Map()
-//     let item 
-
-
-// }
-
-// let arr = ["nap", "teachers", "cheaters", "PAN", "ear", "era", "hectares"];
-
-// alert( aclean(arr) );
-
-
 
 
 // let map = new Map();
@@ -739,32 +727,28 @@
 
 
 
-let arr = ['мама', 'внуЧка','Деда', 'пАпа', 'ппаа', 'едад']
 
+function aclean(arr) {
 let map = new Map()
+let map2 = new Map() 
+
 for (let item of arr) {
   map.set(item, item)
+ }
+
+map.forEach(function(value, key){
+  key = key.toLowerCase().split('').sort().join('');
+  map2.set(key, value)
+  
+})
+
+return Array.from(map2.values())
+
 }
 
-let set = new Set()
+let arr = ["nap", "teachers", "cheaters", "PAN", "ear", "era", "hectares"];
+let paap = ['мама', 'внуЧка','Деда', 'пАпа', 'ппаа', 'едад', 'кот', 'ток', 'отк', 'пора'];
 
-// map.forEach(function(value, key, acc){
-//   key = key.toLowerCase().split('').sort().join('');
-//   alert (`${key}: ${value}`)
-//   set.add(key);
-//   alert (acc.get(value))
-// })
+alert( aclean(arr) );
+alert( aclean(paap))
 
-
-for ( let item of map.keys()) {
-  item = item.toLowerCase().split('').sort().join('')
-  set.add(item)
-  
-  }
-
-// let newArr = Array.from(set)
-
-
-// for (let item of newArr) {
-//   alert(map.get(item))
-// }
