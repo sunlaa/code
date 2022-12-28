@@ -687,3 +687,84 @@
 //   alert (usersById)
 
 
+
+
+// function unique(arr) {
+//     let set = new Set();
+//     arr.forEach(item => set.add(item));
+
+//     let newArr = [];
+
+//     for (let uniq of set) {
+//         newArr.push(uniq);
+//     }
+
+//     return newArr;
+
+//     // решение учебника: return Array.from(new Set(arr));
+
+// }
+  
+//   let values = ["Hare", "Krishna", "Hare", "Krishna",
+//     "Krishna", "Krishna", "Hare", "Hare", ":-O"
+//   ];
+  
+//   alert( unique(values) ); // Hare,Krishna,:-O
+  
+
+
+// function aclean(array) {
+//     let map = new Map()
+//     let item 
+
+
+// }
+
+// let arr = ["nap", "teachers", "cheaters", "PAN", "ear", "era", "hectares"];
+
+// alert( aclean(arr) );
+
+
+
+
+// let map = new Map();
+
+// map.set("name", "John");
+
+// let keys = Array.from(map.keys());
+
+// keys.push("more");
+
+// alert(keys)
+
+
+
+let arr = ['мама', 'внуЧка','Деда', 'пАпа', 'ппаа', 'едад']
+
+let map = new Map()
+for (let item of arr) {
+  map.set(item, item)
+}
+
+let set = new Set()
+
+// map.forEach(function(value, key, acc){
+//   key = key.toLowerCase().split('').sort().join('');
+//   alert (`${key}: ${value}`)
+//   set.add(key);
+//   alert (acc.get(value))
+// })
+
+
+for ( let item of map.keys()) {
+  item = item.toLowerCase().split('').sort().join('')
+  set.add(item)
+  
+  }
+
+// let newArr = Array.from(set)
+
+
+// for (let item of newArr) {
+//   alert(map.get(item))
+// }
