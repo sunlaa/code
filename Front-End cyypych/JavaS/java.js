@@ -728,27 +728,61 @@
 
 
 
-function aclean(arr) {
-let map = new Map()
-let map2 = new Map() 
+// function aclean(arr) {
+// let map = new Map()
+// let map2 = new Map() 
 
-for (let item of arr) {
-  map.set(item, item)
- }
+// for (let item of arr) {
+//   map.set(item, item)
+//  }
 
-map.forEach(function(value, key){
-  key = key.toLowerCase().split('').sort().join('');
-  map2.set(key, value)
+// map.forEach(function(value, key){
+//   key = key.toLowerCase().split('').sort().join('');
+//   map2.set(key, value)
   
-})
+// })
 
-return Array.from(map2.values())
+// return Array.from(map2.values())
 
-}
+// }
 
-let arr = ["nap", "teachers", "cheaters", "PAN", "ear", "era", "hectares"];
-let paap = ['мама', 'внуЧка','Деда', 'пАпа', 'ппаа', 'едад', 'кот', 'ток', 'отк', 'пора'];
+// let arr = ["nap", "teachers", "cheaters", "PAN", "ear", "era", "hectares"];
+// let paap = ['мама', 'внуЧка','Деда', 'пАпа', 'ппаа', 'едад', 'кот', 'ток', 'отк', 'пора'];
 
-alert( aclean(arr) );
-alert( aclean(paap))
+// alert( aclean(arr) );
+// alert( aclean(paap))
 
+
+
+
+// let salaries = {
+//   "John": 100,
+//   "Pete": 300,
+//   "Mary": 250
+// };
+
+// function sumSalaries(obj) {
+//   let sum = 0;
+//   for (let value of Object.values(obj)){
+//     sum += value
+//   }
+//   return sum;
+// }
+// alert( sumSalaries(salaries) ); // 650
+
+
+// function count(obj){
+// return Object.values(obj).length
+// }
+
+// let user = {
+//   name: 'John',
+//   age: 30,
+//   dom: 'lada',
+//   hi: {
+//     salary: 'much',
+//     but: 45,},
+//   nont: []
+// };
+
+// alert( count(user) ); // 5
