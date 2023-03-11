@@ -786,3 +786,508 @@
 // };
 
 // alert( count(user) ); // 5
+
+
+
+// let user = {
+//       name: "John",
+//       years: 30
+//     };
+
+// let {name, years: age, isAdmin = false} = user
+
+// alert(name);
+// alert(age);
+// alert(isAdmin);
+
+
+// let salaries = {
+//       "John": 100,
+//       "Pete": 300,
+//       "Mary": 250,
+//       "Sasha": 10000000,
+//       "Lada": 1000000,
+//     };
+
+// function topSalary(obj) {
+//       let bigValue = 0;
+//       let lucky = null;
+//       for (let [key, value] of Object.entries(obj)) {
+//             if (value > bigValue) {
+//                   bigValue = value
+//                   lucky = key
+//             }
+//       } 
+//       return lucky;
+// }
+
+//  topSalary(salaries)
+
+
+
+
+// function getWeekDay (date) {
+//       let num = date.getDay()
+//       let arrDay = ['ВС', 'ПН', 'ВТ', 'СР', 'ЧТ', 'ПТ', 'СБ']
+//      return arrDay[num]
+// }
+
+// let date = new Date(2023, 0, 30);  // 3 января 2012 года
+// alert( getWeekDay(date) );        // нужно вывести "ВТ"
+
+
+
+// function getDateAgo(date, days) {
+//       let newDate = new Date(date)
+//       let num = newDate.getDate(newDate.setDate(newDate.getDate() - days))
+//       return num
+// }
+
+// let date = new Date();
+
+// alert( getDateAgo(date, 1) ); // 1, (1 Jan 2015)
+// alert( getDateAgo(date, 2) ); // 31, (31 Dec 2014)
+// alert( getDateAgo(date, 365) ); // 2, (2 Jan 2014)
+
+
+
+
+// function getLastDayOfMonth(year, month) {
+//       let date = new Date (year, (month + 1), 1)
+//       date.setDate(date.getDate() - 1)
+//       return date.getDate()
+// }
+
+// alert( getLastDayOfMonth(2023, 1) ); // 28
+
+
+
+// function getSecondsToday() {
+//       let now = new Date()
+//       let start = new Date(now)
+//       start.setHours(0, 0, 0, 0)
+
+//       return Math.round(0.001 * (now.getTime() - start.getTime()))
+// }
+
+// alert(getSecondsToday())
+
+
+// let room = {
+//       number: 23
+//     };
+    
+
+
+
+// let meetup = {
+//       title: "Совещание",
+//       occupiedBy: [{name: "Иванов"}, {name: "Петров"}],
+//       place: room
+//     };
+    
+//     // цикличные ссылки
+//     room.occupiedBy = meetup;
+//     meetup.self = meetup;
+
+    
+//     alert( JSON.stringify(meetup, function replacer(key, value) {
+//       if (key != "" && value == meetup) {
+//             return undefined
+//       } else {
+//             return value
+//       }
+//     } ));
+
+
+// function sumTo(n) {
+//       let sum = 0;
+//       for (let i = n; i > 0; i--) {
+//             sum += i
+//       }
+//       return sum
+// }
+
+// alert(sumTo(100))
+
+// function sumToRec(n) {
+//       if (n == 1) {
+//             return n;
+//       } else {
+//             return (n + sumToRec(n-1));
+//       }
+// }
+
+// alert(sumToRec(100))
+
+// function sumToForm(n) {
+//       return ((1 + n)/2) * n
+// }
+
+// alert(sumToForm(100))
+
+
+
+// function factorial(n) {
+//       if (n == 1) {
+//             return n 
+//       } else {
+//             return (n * factorial(n-1))
+//       }
+// }
+
+// alert(factorial(3))
+
+
+// function fib(n) {
+//       if ( n < 2 ) {
+//             return n
+//       } else {
+//             return (fib(n-1) + fib(n-2))
+//       }
+// }
+
+// alert(fib(7))
+
+
+// let list = {
+//       value: 1,
+//       next: {
+//         value: 2,
+//         next: {
+//           value: 3,
+//           next: {
+//             value: 4,
+//             next: null
+//           }
+//         }
+//       }
+//     };
+
+
+    
+
+// function printList(list) {
+//     while (list) {
+//       alert(`Значение: ${list.value}`);
+//       list = list.next
+//     } 
+// }
+
+// function printList(list) {
+
+//   alert(list.value); // выводим текущий элемент
+
+//   if (list.next) {
+//     printList(list.next); // делаем то же самое для остальной части списка
+//   }
+
+// }
+
+// alert(printList(list))
+
+
+// function printListReverse(list){
+//   let arr = []
+//   while (list) {
+//     arr.push(list.value)
+//   list = list.next
+//   } 
+//   arr.reverse()
+//   for(let item of arr) {
+//     alert(item)
+//   }
+  
+// }
+
+// alert(printListReverse(list))
+
+
+
+// function printReverseList(list) {
+
+//   if (list.next) {
+//     printReverseList(list.next);
+//   }
+
+//   alert(list.value);
+// }
+
+// printReverseList(list);
+ 
+
+
+//  function sum(a) {
+//   return function(b) {
+//     return a + b
+//   }
+
+//  }
+
+
+// alert(sum(2)(-5))
+// alert(sum(2)(3))
+// alert(sum(4)(8))
+
+
+
+
+// function inBetween(a, b) {
+//   return function f(item) {
+
+//     return item >= a && item <= b
+
+//   }
+// }
+
+// function inArray(arr) {
+//   return function f(item) {
+//      return arr.includes(item)
+//    }
+
+//   }
+ 
+
+// let arr = [1, 2, 3, 4, 5, 6, 7];
+
+// alert( arr.filter(inBetween(3, 6)) ); // 3,4,5,6
+
+// alert( arr.filter(inArray([1, 2, 10, 5, 9])) ); // 1,2,5
+
+
+
+// function byField(fieldName) {
+//   return function f(a, b) {
+//     if (a[fieldName] > b[fieldName]) {
+//       return 1
+//     } else {
+//       return -1
+//     }
+//   }
+
+
+// }
+
+// let users = [
+//   { name: "John", age: 20, surname: "Johnson" },
+//   { name: "Pete", age: 18, surname: "Peterson" },
+//   { name: "Ann", age: 19, surname: "Hathaway" }
+// ];
+
+// users.sort(byField('name'));
+// users.sort(byField('age'));
+
+// alert((users[0]).name)
+// alert((users[1].name))
+// alert((users[0].age))
+// alert((users[1].age))
+
+
+
+
+// function makeArmy() {
+//   let shooters = [];
+
+//   for (let i = 0; i < 10; i++) {
+//     let shooter = function() { 
+//       alert( i ); 
+//     };
+//     shooters.push(shooter);
+  
+//   }
+
+//   return shooters;
+// }
+
+// let army = makeArmy();
+
+// army[0]();
+// army[5]();
+// army[3]()
+
+
+
+
+// function makeCounter() {     
+//   function func() {
+      
+//       return func.count++
+//   }
+//   func.count = 0;
+
+//   func.set = function set(value) {
+//       return func.count = value
+// }
+// func.decrease = function decrease() {
+//       return func.count--
+// }
+
+//  return func;
+ 
+// }
+
+//     let counter = makeCounter();
+    
+//     alert( counter() ); // 0
+//     alert( counter() ); // 1
+    
+//     counter.set(10); // установить новое значение счётчика
+    
+    
+//     alert( counter() ); // 10
+
+
+//     counter.decrease(); // уменьшить значение счётчика на 1
+    
+//     alert( counter() ); // 10 (вместо 11)
+
+
+
+
+
+// function check(a) {
+//       let c = a
+
+//       function checkIn(b) {
+//             c += b
+            
+//             return checkIn 
+//             }
+
+//       checkIn.toString = function() {
+//             return c
+//             }
+            
+//       return checkIn
+
+// }
+
+// check(2)(3)
+// alert(check(45)(4)(5))
+
+
+
+// function calculator() {
+//       let input = prompt('Введите пример', 'Например: 2 + 2')
+//       let expression = new Function(`return ${input}`)
+//       return expression()
+// }
+
+// alert(calculator())
+
+
+
+// function printNumbers(from, to) {
+//       function func() {
+//             let i = from++
+//             if (i <= to) {
+//                   alert(i)
+//             }
+//       }
+//       setInterval(func, 1000)
+// }
+
+// printNumbers(4, 9)
+
+
+// function printNumbers(from, to) {
+//       function func() {
+//             let i = from++
+//             if (i <= to) {
+//                   alert(i)
+//             }
+//             setTimeout(func, 1000)
+//       }
+//       setTimeout(func, 1000) 
+// }
+// printNumbers(4, 9)
+
+
+
+
+// function work(a, b) {
+//       alert( a + b ); // произвольная функция или метод
+//     }
+
+
+
+// function spy(func) {
+      
+//       function spicer(...arg) {
+//             spicer.calls.push(arg)
+//             return func.apply(this, arg)
+//       }
+//       spicer.calls = []
+//       return spicer
+// }
+
+// work = spy(work);
+
+// work(1, 2); // 3
+// work(4, 5); // 9
+// work(3, 5)
+// work(1, 2)
+// work(2, 4)
+
+// for (let args of work.calls) {
+//   alert( 'call:' + args.join() ); // "call:1,2", "call:4,5"
+// }
+
+
+
+// function f(x) {
+//       alert(x);
+//     }
+
+
+// function delay(func, ms) {
+//       return function() {
+//             setTimeout((() => func.apply(this, arguments)), ms )
+//       }
+
+// }
+
+// let f3 = delay(f, 3000)
+// let f5 = delay(f, 5000)
+
+// f3('test')
+// f5('lada')
+
+
+
+
+// function debounce(f, ms) {
+
+//       let isCooldown = false;
+          
+//       return function() {
+//         if (isCooldown) return;
+          
+//         f.apply(this, arguments);
+          
+//         isCooldown = true;
+          
+//         setTimeout(() => isCooldown = false, ms);
+
+//             };
+          
+//           }
+
+
+
+// let f = debounce(alert, 1000)
+
+// f(1); // выполняется немедленно
+// f(2); // проигнорирован
+
+// setTimeout( () => f(3), 100); // проигнорирован (прошло только 100 мс)
+// setTimeout( () => f(4), 1100); // выполняется
+// setTimeout( () => f(5), 1500); // проигнорирован (прошло только 400 мс от последнего вызова)
+
+
+
+function hi(lad) {
+      alert(lad)
+}
+
+hi('dad', 4, 'fas', true)
